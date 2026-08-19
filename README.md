@@ -38,6 +38,7 @@ Client-Side Sentiment Analysis
 Vibe Summary + Paginated Posts
 ```
 ## Project Structure
+
 subreddit-vibe-check/
 ├── backend/
 │   ├── server.js
@@ -56,26 +57,40 @@ subreddit-vibe-check/
 
 ## Reddit API Status
 The project was designed to fetch the top 50 hot posts using Reddit's:
+
 /r/{subreddit}/hot
+
 A Reddit Data API access request was submitted, but Reddit declined the request due to its Responsible Builder Policy and/or insufficient details.
+
 Therefore, the current deployed version uses a representative 50-post dataset. The data-fetching logic is isolated in backend/redditService.js, so the 
+
 Reddit API can be integrated later without changing the core frontend, sentiment analysis, or dashboard.
+
 No unauthorized API access or bypass methods are used.
 
 ## Run Locally
- ## Backend
- cd backend
- npm install
- node server.js
+## Backend
 
- ## Frontend
- cd frontend
- npm install
- npm run dev
+cd backend
 
- Create frontend/.env:
- VITE_API_URL=http://localhost:5000
+npm install
+
+node server.js
+
+## Frontend
+
+cd frontend
+
+npm install
+
+npm run dev
+
+Create frontend/.env:
+
+VITE_API_URL=http://localhost:5000
 
 ## Live Links
+
 Live Demo: https://subreddit-vibe-check-henna.vercel.app/
-Source Code:
+
+Source Code: https://github.com/Anjali536/subreddit-vibe-check.git
