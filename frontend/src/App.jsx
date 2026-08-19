@@ -22,9 +22,7 @@ function App() {
       setError("");
       setPosts([]);
 
-      const response = await fetch(
-        `http://localhost:5000/api/subreddit/${subreddit.trim()}`
-      );
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/subreddit/${subreddit}`);
 
       const data = await response.json();
 
